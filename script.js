@@ -1,29 +1,44 @@
+// ==============================
+// SHARDEX FF SKILLS
+// Premium Navigation Script
+// ==============================
+
 const pages = document.querySelectorAll(".page");
 
-function showPage(id) {
+/**
+ * Show a page by ID
+ */
+function showPage(pageId) {
+
     pages.forEach(page => {
-        page.style.display = "none";
+        page.classList.remove("active");
     });
 
-    const activePage = document.getElementById(id);
+    const targetPage = document.getElementById(pageId);
 
-    if (activePage) {
-        activePage.style.display = "flex";
+    if (targetPage) {
+        targetPage.classList.add("active");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 }
 
-// Home page se start karo
-showPage("home");
+// Make function available to HTML onclick
+window.showPage = showPage;
 
-// Sab buttons ko listen karo
-document.querySelectorAll("[data-page]").forEach(button => {
+// Ensure Home page is shown on first load
+document.addEventListener("DOMContentLoaded", () => {
+    showPage("home");
+});
 
-    button.addEventListener("click", () => {
+// Optional: Keyboard shortcuts
+document.addEventListener("keydown", (e) => {
 
-        const target = button.getAttribute("data-page");
-
-        showPage(target);
-
-    });
+    if (e.key === "Escape") {
+        showPage("home");
+    }
 
 });
