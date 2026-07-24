@@ -7,151 +7,232 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- HOME -->
-<section id="home" class="page">
-    <div class="card">
+
+<section id="home" class="page home">
+
+    <div class="container">
+
         <h1>SHARDEX</h1>
+
         <p>FREE FIRE SKILLS</p>
 
-        <a href="#roles" class="btn">ENTER</a>
+        <button class="btn" data-page="roles">
+            ENTER
+        </button>
+
     </div>
+
 </section>
 
-<!-- ROLE SELECT -->
+<!-- ROLES -->
+
 <section id="roles" class="page">
-    <div class="card">
-        <h2>SELECT YOUR ROLE</h2>
 
-        <a href="#rusher" class="btn">RUSHER</a>
-        <a href="#support" class="btn">SUPPORT</a>
-        <a href="#rifle" class="btn">RIFLE</a>
-        <a href="#sniper" class="btn">SNIPER</a>
+    <div class="container">
 
-        <a href="#home" class="back">BACK</a>
+        <h2>SELECT ROLE</h2>
+
+        <button class="btn" data-page="rusher">
+            RUSHER
+        </button>
+
+        <button class="btn" data-page="support">
+            SUPPORT
+        </button>
+
+        <button class="btn" data-page="rifle">
+            RIFLE
+        </button>
+
+        <button class="btn" data-page="sniper">
+            SNIPER
+        </button>
+
+        <button class="back" data-page="home">
+            BACK
+        </button>
+
     </div>
+
 </section>
 
 <!-- RUSHER -->
+
 <section id="rusher" class="page">
-    <div class="card">
+
+    <div class="container">
+
         <h2>RUSHER</h2>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>BR SKILLS</h3>
+
             <ul>
                 <li>Tatsuya (Active)</li>
                 <li>Jota</li>
                 <li>Miguel</li>
                 <li>D-Bee</li>
             </ul>
+
         </div>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>CS SKILLS</h3>
+
             <ul>
                 <li>Oscar (Active)</li>
                 <li>Jota</li>
                 <li>Leon</li>
                 <li>Hayato</li>
             </ul>
+
         </div>
 
-        <a href="#roles" class="back">BACK</a>
+        <button class="back" data-page="roles">
+            BACK
+        </button>
+
     </div>
+
 </section>
 
 <!-- SUPPORT -->
+
 <section id="support" class="page">
-    <div class="card">
+
+    <div class="container">
+
         <h2>SUPPORT</h2>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>BR SKILLS</h3>
+
             <ul>
                 <li>Alok (Active)</li>
                 <li>Kapella</li>
                 <li>Olivia</li>
                 <li>Dimitri</li>
             </ul>
+
         </div>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>CS SKILLS</h3>
+
             <ul>
                 <li>Dimitri (Active)</li>
                 <li>Kapella</li>
                 <li>Leon</li>
                 <li>Olivia</li>
             </ul>
+
         </div>
 
-        <a href="#roles" class="back">BACK</a>
+        <button class="back" data-page="roles">
+            BACK
+        </button>
+
     </div>
+
 </section>
 
 <!-- RIFLE -->
+
 <section id="rifle" class="page">
-    <div class="card">
+
+    <div class="container">
+
         <h2>RIFLE</h2>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>BR SKILLS</h3>
+
             <ul>
                 <li>Skyler (Active)</li>
+                <li>Laura</li>
                 <li>Moco</li>
                 <li>D-Bee</li>
-                <li>Laura</li>
             </ul>
+
         </div>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>CS SKILLS</h3>
+
             <ul>
                 <li>Skyler (Active)</li>
                 <li>Laura</li>
-                <li>Moco</li>
                 <li>Hayato</li>
+                <li>Moco</li>
             </ul>
+
         </div>
 
-        <a href="#roles" class="back">BACK</a>
+        <button class="back" data-page="roles">
+            BACK
+        </button>
+
     </div>
+
 </section>
 
 <!-- SNIPER -->
+
 <section id="sniper" class="page">
-    <div class="card">
+
+    <div class="container">
+
         <h2>SNIPER</h2>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>BR SKILLS</h3>
+
             <ul>
                 <li>Iris (Active)</li>
                 <li>Laura</li>
-                <li>Moco</li>
                 <li>Rafael</li>
+                <li>Moco</li>
             </ul>
+
         </div>
 
-        <div class="skill-box">
+        <div class="card">
+
             <h3>CS SKILLS</h3>
+
             <ul>
                 <li>Iris (Active)</li>
                 <li>Laura</li>
                 <li>Rafael</li>
                 <li>Moco</li>
             </ul>
+
         </div>
 
-        <a href="#roles" class="back">BACK</a>
+        <button class="back" data-page="roles">
+            BACK
+        </button>
+
     </div>
+
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
