@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shardex FF Skills</title>
+<title>Shardex FF Skills</title>
 
-    <!-- Orbitron Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Animated Background -->
 <div class="bg-animation">
     <span></span>
     <span></span>
@@ -25,25 +21,20 @@
     <span></span>
 </div>
 
-<!-- ========================= -->
-<!-- HOME PAGE -->
-<!-- ========================= -->
+<!-- HOME -->
 
 <section id="home" class="page active">
 
     <div class="home-box glass">
 
-        <h1 class="logo">
-            SHARDEX
-        </h1>
+        <h1 class="logo">SHARDEX</h1>
 
-        <h2 class="subtitle">
+        <p class="subtitle">
             FREE FIRE SKILLS
-        </h2>
+        </p>
 
-        <button
-            class="enter-btn glow-btn"
-            onclick="showPage('roles')">
+        <button class="glow-btn"
+        onclick="showPage('roles')">
 
             ENTER
 
@@ -53,135 +44,107 @@
 
 </section>
 
-<!-- ========================= -->
-<!-- ROLE PAGE -->
-<!-- ========================= -->
+<!-- ROLE SELECT -->
 
 <section id="roles" class="page">
 
-    <button
-        class="back-btn"
-        onclick="showPage('home')">
+<button class="back-btn"
+onclick="showPage('home')">
 
-        ← Back
+← Back
 
-    </button>
+</button>
 
-    <h2 class="page-title">
+<h2 class="page-title">
+SELECT YOUR ROLE
+</h2>
 
-        SELECT YOUR ROLE
+<div class="role-grid">
 
-    </h2>
+<div class="role-card glass"
+onclick="showPage('rusher')">
 
-    <div class="role-grid">
+<h3>RUSHER</h3>
 
-        <!-- Rusher -->
+</div>
 
-        <div
-            class="role-card glass"
-            onclick="showPage('rusher')">
+<div class="role-card glass"
+onclick="showPage('support')">
 
-            <h3>RUSHER</h3>
+<h3>SUPPORT</h3>
 
-        </div>
+</div>
 
-        <!-- Support -->
+<div class="role-card glass"
+onclick="showPage('rifle')">
 
-        <div
-            class="role-card glass"
-            onclick="showPage('support')">
+<h3>RIFLE</h3>
 
-            <h3>SUPPORT</h3>
+</div>
 
-        </div>
+<div class="role-card glass"
+onclick="showPage('sniper')">
 
-        <!-- Rifle -->
+<h3>SNIPER</h3>
 
-        <div
-            class="role-card glass"
-            onclick="showPage('rifle')">
+</div>
 
-            <h3>RIFLE</h3>
-
-        </div>
-
-        <!-- Sniper -->
-
-        <div
-            class="role-card glass"
-            onclick="showPage('sniper')">
-
-            <h3>SNIPER</h3>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ========================= -->
-<!-- RUSHER PAGE -->
-<!-- ========================= -->
+<!-- RUSHER -->
 
 <section id="rusher" class="page">
 
-    <button
-        class="back-btn"
-        onclick="showPage('roles')">
+<button class="back-btn"
+onclick="showPage('roles')">
 
-        ← Back
+← Back
 
-    </button>
+</button>
 
-    <h2 class="page-title">
+<h2 class="page-title">
+RUSHER
+</h2>
 
-        RUSHER
+<div class="skills-wrapper">
 
-    </h2>
+<div class="skill-card glass">
 
-    <div class="skills-wrapper">
+<h3>Battle Royale</h3>
 
-        <div class="skill-card glass">
+<ul>
 
-            <h3>Battle Royale</h3>
+<li>Tatsuya (Active)</li>
+<li>Jota</li>
+<li>Miguel</li>
+<li>D-Bee</li>
 
-            <ul>
+</ul>
 
-                <li>Tatsuya (Active)</li>
+</div>
 
-                <li>Jota</li>
+<div class="skill-card glass">
 
-                <li>Miguel</li>
+<h3>Clash Squad</h3>
 
-                <li>D-Bee</li>
+<ul>
 
-            </ul>
+<li>Oscar (Active)</li>
+<li>Jota</li>
+<li>Leon</li>
+<li>Hayato</li>
 
-        </div>
+</ul>
 
-        <div class="skill-card glass">
+</div>
 
-            <h3>Clash Squad</h3>
-
-            <ul>
-
-                <li>Oscar (Active)</li>
-
-                <li>Jota</li>
-
-                <li>Leon</li>
-
-                <li>Hayato</li>
-
-            </ul>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
     <!-- ========================= -->
-<!-- SUPPORT PAGE -->
+<!-- SUPPORT -->
 <!-- ========================= -->
 
 <section id="support" class="page">
@@ -203,8 +166,8 @@
             <ul>
                 <li>Alok (Active)</li>
                 <li>Kapella</li>
-                <li>Olivia</li>
                 <li>Leon</li>
+                <li>Dimitri</li>
             </ul>
 
         </div>
@@ -227,7 +190,7 @@
 </section>
 
 <!-- ========================= -->
-<!-- RIFLE PAGE -->
+<!-- RIFLE -->
 <!-- ========================= -->
 
 <section id="rifle" class="page">
@@ -273,7 +236,7 @@
 </section>
 
 <!-- ========================= -->
-<!-- SNIPER PAGE -->
+<!-- SNIPER -->
 <!-- ========================= -->
 
 <section id="sniper" class="page">
@@ -318,7 +281,6 @@
 
 </section>
 
-<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
