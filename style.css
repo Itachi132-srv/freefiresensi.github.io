@@ -1,6 +1,6 @@
 /* ===========================
-   SHARDEX FF SKILLS
-   PREMIUM GAMING UI
+SHARDEX FF SKILLS
+PREMIUM GAMING UI
 =========================== */
 
 *{
@@ -23,7 +23,7 @@ body{
 }
 
 /* ===========================
-   ANIMATED BACKGROUND
+ANIMATED BACKGROUND
 =========================== */
 
 .bg-animation{
@@ -31,8 +31,7 @@ body{
     inset:0;
     overflow:hidden;
     z-index:-2;
-    background:
-    radial-gradient(circle at top,#7b2cff 0%,#0b0b0b 55%,#000 100%);
+    background:radial-gradient(circle at top,#7b2cff 0%,#0b0b0b 55%,#000 100%);
 }
 
 .bg-animation span{
@@ -45,57 +44,21 @@ body{
     animation:floatGlow 16s linear infinite;
 }
 
-.bg-animation span:nth-child(1){
-    top:5%;
-    left:8%;
-}
-
-.bg-animation span:nth-child(2){
-    top:70%;
-    left:15%;
-    animation-duration:20s;
-}
-
-.bg-animation span:nth-child(3){
-    top:25%;
-    right:10%;
-}
-
-.bg-animation span:nth-child(4){
-    bottom:8%;
-    right:12%;
-    animation-duration:18s;
-}
-
-.bg-animation span:nth-child(5){
-    top:45%;
-    left:45%;
-}
-
-.bg-animation span:nth-child(6){
-    bottom:30%;
-    right:40%;
-    animation-duration:22s;
-}
+.bg-animation span:nth-child(1){ top:5%; left:8%; }
+.bg-animation span:nth-child(2){ top:70%; left:15%; animation-duration:20s; }
+.bg-animation span:nth-child(3){ top:25%; right:10%; }
+.bg-animation span:nth-child(4){ bottom:8%; right:12%; animation-duration:18s; }
+.bg-animation span:nth-child(5){ top:45%; left:45%; }
+.bg-animation span:nth-child(6){ bottom:30%; right:40%; animation-duration:22s; }
 
 @keyframes floatGlow{
-
-    0%{
-        transform:translateY(0) scale(1);
-    }
-
-    50%{
-        transform:translateY(-45px) scale(1.15);
-    }
-
-    100%{
-        transform:translateY(0) scale(1);
-    }
-
+    0%{ transform:translateY(0) scale(1); }  
+    50%{ transform:translateY(-45px) scale(1.15); }  
+    100%{ transform:translateY(0) scale(1); }
 }
 
 /* ===========================
-   PAGE
+PAGE
 =========================== */
 
 .page{
@@ -113,88 +76,54 @@ body{
 }
 
 @keyframes fade{
-
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+    from{ opacity:0; transform:translateY(25px); }  
+    to{ opacity:1; transform:translateY(0); }
 }
 
 /* ===========================
-   GLASS EFFECT
+GLASS EFFECT
 =========================== */
 
 .glass{
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(18px);
-
-    -webkit-backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    border-radius:22px;
-
-    box-shadow:
-    0 0 35px rgba(130,0,255,.22);
-
+    background:rgba(255,255,255,.08);  
+    backdrop-filter:blur(18px);  
+    -webkit-backdrop-filter:blur(18px);  
+    border:1px solid rgba(255,255,255,.12);  
+    border-radius:22px;  
+    box-shadow:0 0 35px rgba(130,0,255,.22);
 }
 
 /* ===========================
-   HOME
+HOME
 =========================== */
 
 .home-box{
-
-    width:100%;
-    max-width:520px;
-
-    padding:60px 30px;
-
+    width:100%;  
+    max-width:520px;  
+    padding:60px 30px;  
     text-align:center;
-
 }
 
 .logo{
-
-    font-size:4rem;
-
-    font-weight:800;
-
-    color:#fff;
-
-    text-shadow:
-    0 0 12px #8f3dff,
-    0 0 30px #7b2cff;
-
+    font-size:4rem;  
+    font-weight:800;  
+    color:#fff;  
+    text-shadow:0 0 12px #8f3dff, 0 0 30px #7b2cff;  
     letter-spacing:4px;
-
 }
 
 .subtitle{
-
-    margin-top:18px;
-
-    color:#cfcfcf;
-
-    font-size:1.1rem;
-
+    margin-top:18px;  
+    color:#cfcfcf;  
+    font-size:1.1rem;  
     letter-spacing:3px;
-
 }
+
 /* ===========================
-   BUTTONS
+BUTTONS
 =========================== */
 
-.glow-btn,
-.back-btn{
+.glow-btn, .back-btn{
     cursor:pointer;
     border:none;
     outline:none;
@@ -209,16 +138,12 @@ body{
     color:#fff;
     border-radius:50px;
     background:linear-gradient(135deg,#6d28ff,#9f49ff);
-    box-shadow:
-        0 0 18px rgba(159,73,255,.7),
-        0 0 45px rgba(109,40,255,.45);
+    box-shadow:0 0 18px rgba(159,73,255,.7), 0 0 45px rgba(109,40,255,.45);
 }
 
 .glow-btn:hover{
     transform:translateY(-4px) scale(1.05);
-    box-shadow:
-        0 0 28px rgba(159,73,255,.9),
-        0 0 60px rgba(109,40,255,.6);
+    box-shadow:0 0 28px rgba(159,73,255,.9), 0 0 60px rgba(109,40,255,.6);
 }
 
 .back-btn{
@@ -238,7 +163,7 @@ body{
 }
 
 /* ===========================
-   TITLES
+TITLES
 =========================== */
 
 .page-title{
@@ -250,7 +175,7 @@ body{
 }
 
 /* ===========================
-   ROLE GRID
+ROLE GRID
 =========================== */
 
 .role-grid{
@@ -277,13 +202,11 @@ body{
 .role-card:hover{
     transform:translateY(-8px) scale(1.03);
     border-color:#9f49ff;
-    box-shadow:
-        0 0 25px rgba(159,73,255,.45),
-        inset 0 0 15px rgba(159,73,255,.15);
+    box-shadow:0 0 25px rgba(159,73,255,.45), inset 0 0 15px rgba(159,73,255,.15);
 }
 
 /* ===========================
-   SKILL CARDS
+SKILL CARDS
 =========================== */
 
 .skills-wrapper{
@@ -313,83 +236,138 @@ body{
     font-size:1.3rem;
 }
 
-.skill-card ul{
-    list-style:none;
+.skill-card ul{ list-style:none; }
+.skill-card li{ padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08); color:#eee; transition:.3s; }
+.skill-card li:last-child{ border-bottom:none; }
+.skill-card li:hover{ color:#b98cff; padding-left:10px; }
+
+/* ===========================
+GENERATOR STYLES
+=========================== */
+.generator-box {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
 }
 
-.skill-card li{
-    padding:12px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    color:#eee;
-    transition:.3s;
+.instruction {
+    color: #cfcfcf;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
 }
 
-.skill-card li:last-child{
-    border-bottom:none;
+.skill-type-title {
+    color: #b98cff;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(159,73,255,.3);
+    padding-bottom: 5px;
 }
 
-.skill-card li:hover{
-    color:#b98cff;
-    padding-left:10px;
+.char-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.char-chip {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.char-chip:hover {
+    background: rgba(159,73,255,.2);
+}
+
+.char-chip.selected {
+    background: #9f49ff;
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(159,73,255,.6);
+    font-weight: bold;
+}
+
+.char-chip.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 /* ===========================
-   RESPONSIVE
+LOADING CIRCLE
+=========================== */
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.loader svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.bg-circle {
+    fill: none;
+    stroke: rgba(255,255,255,0.1);
+    stroke-width: 8;
+}
+
+.progress-circle {
+    fill: none;
+    stroke: #9f49ff;
+    stroke-width: 8;
+    stroke-dasharray: 283; 
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #9f49ff;
+}
+
+.result-skill {
+    background: #111;
+    border: 1px solid #9f49ff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+RESPONSIVE
 =========================== */
 
 @media (max-width:768px){
-
-    .logo{
-        font-size:2.8rem;
-    }
-
-    .subtitle{
-        font-size:.95rem;
-    }
-
-    .page-title{
-        font-size:1.6rem;
-    }
-
-    .home-box{
-        padding:40px 20px;
-    }
-
-    .glow-btn{
-        width:100%;
-        padding:16px;
-    }
-
-    .skills-wrapper{
-        grid-template-columns:1fr;
-    }
-
-    .role-grid{
-        grid-template-columns:1fr;
-    }
+    .logo{ font-size:2.8rem; }  
+    .subtitle{ font-size:.95rem; }  
+    .page-title{ font-size:1.6rem; }  
+    .home-box{ padding:40px 20px; }  
+    .glow-btn{ width:100%; padding:16px; }  
+    .skills-wrapper, .role-grid{ grid-template-columns:1fr; }
 }
 
 @media (max-width:480px){
-
-    .logo{
-        font-size:2.2rem;
-        letter-spacing:2px;
-    }
-
-    .subtitle{
-        letter-spacing:1px;
-    }
-
-    .skill-card{
-        padding:22px;
-    }
-
-    .role-card{
-        padding:35px 15px;
-    }
-
-    .back-btn{
-        padding:10px 18px;
-        font-size:.9rem;
-    }
+    .logo{ font-size:2.2rem; letter-spacing:2px; }  
+    .subtitle{ letter-spacing:1px; }  
+    .skill-card{ padding:22px; }  
+    .role-card{ padding:35px 15px; }  
+    .back-btn{ padding:10px 18px; font-size:.9rem; }
 }
+
