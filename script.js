@@ -1,8 +1,3 @@
-// ==============================
-// SHARDEX FF SKILLS
-// Premium Navigation & Generator
-// ==============================
-
 const pages = document.querySelectorAll(".page");
 
 function showPage(pageId) {
@@ -22,18 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     initGenerator();
 });
 
-// Optional: Keyboard shortcuts
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {  
         showPage("home");  
     }
 });
 
-// ==============================
-// GENERATOR LOGIC
-// ==============================
-
-// All Free Fire Characters mapped to their best roles
 const characters = {
     active: [
         {name: 'Alok', role: 'Support'}, {name: 'Tatsuya', role: 'Rusher'}, 
@@ -77,7 +66,6 @@ function initGenerator() {
     const activeGrid = document.getElementById('active-grid');
     const passiveGrid = document.getElementById('passive-grid');
 
-    // Render Actives
     characters.active.forEach(char => {
         const div = document.createElement('div');
         div.className = 'char-chip';
@@ -86,7 +74,6 @@ function initGenerator() {
         activeGrid.appendChild(div);
     });
 
-    // Render Passives
     characters.passive.forEach(char => {
         const div = document.createElement('div');
         div.className = 'char-chip passive-chip';
@@ -119,7 +106,6 @@ function togglePassive(name, element) {
     
     document.getElementById('passive-count').innerText = `(${selectedPassives.length}/3)`;
     
-    // Disable remaining if 3 selected
     const allPassiveChips = document.querySelectorAll('.passive-chip');
     allPassiveChips.forEach(chip => {
         if (!chip.classList.contains('selected') && selectedPassives.length >= 3) {
@@ -141,10 +127,6 @@ function checkGenerateBtn() {
     }
 }
 
-// ==============================
-// LOADING & EVALUATION
-// ==============================
-
 function startGeneration() {
     document.getElementById('selection-area').style.display = 'none';
     document.getElementById('loading-area').style.display = 'block';
@@ -155,7 +137,7 @@ function startGeneration() {
     const circumference = 283;
 
     const interval = setInterval(() => {
-        progress += 2; // Speed of loading
+        progress += 2;
         text.innerText = progress + '%';
         
         const offset = circumference - (progress / 100) * circumference;
@@ -174,7 +156,6 @@ function showResults() {
 
     const allSelected = [selectedActive, ...selectedPassives];
     
-    // Find roles for selected skills
     let roleCounts = { 'Rusher': 0, 'Support': 0, 'Sniper': 0, 'Rifle': 0 };
     let fullObjects = [];
 
@@ -184,27 +165,22 @@ function showResults() {
         fullObjects.push(charObj);
     });
 
-    // Determine dominant role
     let dominantRole = Object.keys(roleCounts).reduce((a, b) => roleCounts[a] > roleCounts[b] ? a : b);
     
-    // Removed emojis from the result title
     document.getElementById('result-role').innerText = `BEST FOR: ${dominantRole.toUpperCase()}`;
     
-    // Display selected skills
     const displayDiv = document.getElementById('selected-skills-display');
     displayDiv.innerHTML = '';
     allSelected.forEach(skill => {
         displayDiv.innerHTML += `<div class="result-skill">${skill}</div>`;
     });
 
-    // AI Suggestion Logic
     const suggestionDiv = document.getElementById('ai-suggestion');
-    const mismatch = fullObjects.find(c => c.role !== dominantRole && c.name !== selectedActive); // Find a passive that doesn't fit
+    const mismatch = fullObjects.find(c => c.role !== dominantRole && c.name !== selectedActive);
 
     if (roleCounts[dominantRole] === 4) {
         suggestionDiv.innerHTML = `<p style="color: #00ff88;">Perfect Combination! All skills are excellent for a ${dominantRole} playstyle.</p>`;
     } else if (mismatch) {
-        // Find a better alternative
         const alternative = characters.passive.find(c => c.role === dominantRole && !selectedPassives.includes(c.name));
         if (alternative) {
             suggestionDiv.innerHTML = `<p><strong>SDX TIP:</strong> This combo is decent, but <strong>${mismatch.name}</strong> leans more towards the ${mismatch.role} role. For a pure ${dominantRole} build, swapping it for <strong>${alternative.name}</strong> would be much better!</p>`;
@@ -229,128 +205,7 @@ function resetGenerator() {
     document.getElementById('result-area').style.display = 'none';
     document.getElementById('selection-area').style.display = 'block';
     
-    // Reset Loading circle
     document.getElementById('loading-circle').style.strokeDashoffset = 283;
     document.getElementById('loading-text').innerText = '0%';
 }
-        if (selectedPassives.length < 3) {
-            selectedPassives.push(name);
-            element.classList.add('selected');
-        }
-    }
-    
-    document.getElementById('passive-count').innerText = `(${selectedPassives.length}/3)`;
-    
-    // Disable remaining if 3 selected
-    const allPassiveChips = document.querySelectorAll('.passive-chip');
-    allPassiveChips.forEach(chip => {
-        if (!chip.classList.contains('selected') && selectedPassives.length >= 3) {
-            chip.classList.add('disabled');
-        } else {
-            chip.classList.remove('disabled');
-        }
-    });
 
-    checkGenerateBtn();
-}
-
-function checkGenerateBtn() {
-    const btn = document.getElementById('generate-btn');
-    if (selectedActive && selectedPassives.length === 3) {
-        btn.style.display = 'inline-block';
-    } else {
-        btn.style.display = 'none';
-    }
-}
-
-// ==============================
-// LOADING & EVALUATION
-// ==============================
-
-function startGeneration() {
-    document.getElementById('selection-area').style.display = 'none';
-    document.getElementById('loading-area').style.display = 'block';
-    
-    let progress = 0;
-    const circle = document.getElementById('loading-circle');
-    const text = document.getElementById('loading-text');
-    const circumference = 283;
-
-    const interval = setInterval(() => {
-        progress += 2; // Speed of loading
-        text.innerText = progress + '%';
-        
-        const offset = circumference - (progress / 100) * circumference;
-        circle.style.strokeDashoffset = offset;
-
-        if (progress >= 100) {
-            clearInterval(interval);
-            setTimeout(showResults, 500);
-        }
-    }, 40);
-}
-
-function showResults() {
-    document.getElementById('loading-area').style.display = 'none';
-    document.getElementById('result-area').style.display = 'block';
-
-    const allSelected = [selectedActive, ...selectedPassives];
-    
-    // Find roles for selected skills
-    let roleCounts = { 'Rusher': 0, 'Support': 0, 'Sniper': 0, 'Rifle': 0 };
-    let fullObjects = [];
-
-    allSelected.forEach(skillName => {
-        let charObj = characters.active.find(c => c.name === skillName) || characters.passive.find(c => c.name === skillName);
-        roleCounts[charObj.role]++;
-        fullObjects.push(charObj);
-    });
-
-    // Determine dominant role
-    let dominantRole = Object.keys(roleCounts).reduce((a, b) => roleCounts[a] > roleCounts[b] ? a : b);
-    
-    document.getElementById('result-role').innerText = `🔥 BEST FOR: ${dominantRole.toUpperCase()} 🔥`;
-    
-    // Display selected skills
-    const displayDiv = document.getElementById('selected-skills-display');
-    displayDiv.innerHTML = '';
-    allSelected.forEach(skill => {
-        displayDiv.innerHTML += `<div class="result-skill">${skill}</div>`;
-    });
-
-    // AI Suggestion Logic
-    const suggestionDiv = document.getElementById('ai-suggestion');
-    const mismatch = fullObjects.find(c => c.role !== dominantRole && c.name !== selectedActive); // Find a passive that doesn't fit
-
-    if (roleCounts[dominantRole] === 4) {
-        suggestionDiv.innerHTML = `<p style="color: #00ff88;">Perfect Combination! Saari skills ${dominantRole} playstyle ke liye behtareen hain.</p>`;
-    } else if (mismatch) {
-        // Find a better alternative
-        const alternative = characters.passive.find(c => c.role === dominantRole && !selectedPassives.includes(c.name));
-        if (alternative) {
-            suggestionDiv.innerHTML = `<p><strong>AI Tip:</strong> Ye combo theek hai, lekin <strong>${mismatch.name}</strong> thoda ${mismatch.role} side pe hai. Ek pure ${dominantRole} build ke liye aap iski jagah <strong>${alternative.name}</strong> use karen to zyada faida hoga!</p>`;
-        } else {
-             suggestionDiv.innerHTML = `<p>Good mixed combination for versatile gameplay!</p>`;
-        }
-    }
-}
-
-function resetGenerator() {
-    selectedActive = null;
-    selectedPassives = [];
-    document.getElementById('passive-count').innerText = `(0/3)`;
-    
-    const chips = document.querySelectorAll('.char-chip');
-    chips.forEach(chip => {
-        chip.classList.remove('selected');
-        chip.classList.remove('disabled');
-    });
-
-    document.getElementById('generate-btn').style.display = 'none';
-    document.getElementById('result-area').style.display = 'none';
-    document.getElementById('selection-area').style.display = 'block';
-    
-    // Reset Loading circle
-    document.getElementById('loading-circle').style.strokeDashoffset = 283;
-    document.getElementById('loading-text').innerText = '0%';
-}
