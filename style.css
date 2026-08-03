@@ -106,6 +106,8 @@ body{
     border:none;
     outline:none;
     transition:.35s ease;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .glow-btn{
