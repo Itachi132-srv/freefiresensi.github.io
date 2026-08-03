@@ -1,8 +1,3 @@
-/* ===========================
-SHARDEX FF SKILLS
-PREMIUM GAMING UI
-=========================== */
-
 *{
     margin:0;
     padding:0;
@@ -22,15 +17,12 @@ body{
     position:relative;
 }
 
-/* ===========================
-ANIMATED BACKGROUND
-=========================== */
-
 .bg-animation{
     position:fixed;
     inset:0;
     overflow:hidden;
     z-index:-2;
+    pointer-events:none;
     background:radial-gradient(circle at top,#7b2cff 0%,#0b0b0b 55%,#000 100%);
 }
 
@@ -57,10 +49,6 @@ ANIMATED BACKGROUND
     100%{ transform:translateY(0) scale(1); }
 }
 
-/* ===========================
-PAGE
-=========================== */
-
 .page{
     display:none;
     min-height:100vh;
@@ -69,6 +57,8 @@ PAGE
     align-items:center;
     flex-direction:column;
     animation:fade .5s ease;
+    position:relative;
+    z-index:1;
 }
 
 .page.active{
@@ -80,10 +70,6 @@ PAGE
     to{ opacity:1; transform:translateY(0); }
 }
 
-/* ===========================
-GLASS EFFECT
-=========================== */
-
 .glass{
     background:rgba(255,255,255,.08);  
     backdrop-filter:blur(18px);  
@@ -92,10 +78,6 @@ GLASS EFFECT
     border-radius:22px;  
     box-shadow:0 0 35px rgba(130,0,255,.22);
 }
-
-/* ===========================
-HOME
-=========================== */
 
 .home-box{
     width:100%;  
@@ -118,10 +100,6 @@ HOME
     font-size:1.1rem;  
     letter-spacing:3px;
 }
-
-/* ===========================
-BUTTONS
-=========================== */
 
 .glow-btn, .back-btn{
     cursor:pointer;
@@ -162,10 +140,6 @@ BUTTONS
     transform:translateY(-2px);
 }
 
-/* ===========================
-TITLES
-=========================== */
-
 .page-title{
     font-size:2rem;
     letter-spacing:2px;
@@ -173,10 +147,6 @@ TITLES
     text-align:center;
     text-shadow:0 0 15px #9f49ff;
 }
-
-/* ===========================
-ROLE GRID
-=========================== */
 
 .role-grid{
     width:100%;
@@ -204,10 +174,6 @@ ROLE GRID
     border-color:#9f49ff;
     box-shadow:0 0 25px rgba(159,73,255,.45), inset 0 0 15px rgba(159,73,255,.15);
 }
-
-/* ===========================
-SKILL CARDS
-=========================== */
 
 .skills-wrapper{
     width:100%;
@@ -241,9 +207,6 @@ SKILL CARDS
 .skill-card li:last-child{ border-bottom:none; }
 .skill-card li:hover{ color:#b98cff; padding-left:10px; }
 
-/* ===========================
-GENERATOR STYLES
-=========================== */
 .generator-box {
     width: 100%;
     max-width: 800px;
@@ -300,9 +263,6 @@ GENERATOR STYLES
     cursor: not-allowed;
 }
 
-/* ===========================
-LOADING CIRCLE
-=========================== */
 .loader {
     position: relative;
     width: 150px;
@@ -349,10 +309,6 @@ LOADING CIRCLE
     border-radius: 8px;
     font-size: 0.9rem;
 }
-
-/* ===========================
-RESPONSIVE
-=========================== */
 
 @media (max-width:768px){
     .logo{ font-size:2.8rem; }  
