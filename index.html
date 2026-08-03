@@ -1,288 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shardex FF Skills</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
-<div class="bg-animation">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-
-<!-- HOME -->
-
-<section id="home" class="page active">
-
-    <div class="home-box glass">
-
-        <h1 class="logo">SHARDEX</h1>
-
-        <p class="subtitle">
-            FREE FIRE SKILLS
-        </p>
-
-        <button class="glow-btn"
-        onclick="showPage('roles')">
-
-            ENTER
-
-        </button>
-
-    </div>
-
-</section>
-
-<!-- ROLE SELECT -->
-
-<section id="roles" class="page">
-
-<button class="back-btn"
-onclick="showPage('home')">
-
-← Back
-
-</button>
-
-<h2 class="page-title">
-SELECT YOUR ROLE
-</h2>
-
-<div class="role-grid">
-
-<div class="role-card glass"
-onclick="showPage('rusher')">
-
-<h3>RUSHER</h3>
-
-</div>
-
-<div class="role-card glass"
-onclick="showPage('support')">
-
-<h3>SUPPORT</h3>
-
-</div>
-
-<div class="role-card glass"
-onclick="showPage('rifle')">
-
-<h3>RIFLE</h3>
-
-</div>
-
-<div class="role-card glass"
-onclick="showPage('sniper')">
-
-<h3>SNIPER</h3>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- RUSHER -->
-
-<section id="rusher" class="page">
-
-<button class="back-btn"
-onclick="showPage('roles')">
-
-← Back
-
-</button>
-
-<h2 class="page-title">
-RUSHER
-</h2>
-
-<div class="skills-wrapper">
-
-<div class="skill-card glass">
-
-<h3>Battle Royale</h3>
-
-<ul>
-
-<li>Tatsuya (Active)</li>
-<li>Jota</li>
-<li>Miguel</li>
-<li>D-Bee</li>
-
-</ul>
-
-</div>
-
-<div class="skill-card glass">
-
-<h3>Clash Squad</h3>
-
-<ul>
-
-<li>Oscar (Active)</li>
-<li>Jota</li>
-<li>Leon</li>
-<li>Hayato</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-    
-<!-- ========================= -->
-<!-- SUPPORT -->
-<!-- ========================= -->
-
-<section id="support" class="page">
-
-    <button class="back-btn" onclick="showPage('roles')">
-        ← Back
-    </button>
-
-    <h2 class="page-title">
-        SUPPORT
-    </h2>
-
-    <div class="skills-wrapper">
-
-        <div class="skill-card glass">
-
-            <h3>Battle Royale</h3>
-
-            <ul>
-                <li>Alok (Active)</li>
-                <li>Kapella</li>
-                <li>Leon</li>
-                <li>Jota</li>
-            </ul>
-
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Shardex FF Skills</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+    <div class="bg-animation">  
+        <span></span>  
+        <span></span>  
+        <span></span>  
+        <span></span>  
+        <span></span>  
+        <span></span>  
+    </div>  
+
+    <section id="home" class="page active">  
+        <div class="home-box glass">  
+            <h1 class="logo">SHARDEX</h1>  
+            <p class="subtitle">FREE FIRE SKILLS</p>  
+            <button class="glow-btn" onclick="showPage('main-menu')">ENTER</button>  
+        </div>
+    </section>  
+
+    <section id="main-menu" class="page">
+        <button class="back-btn" onclick="showPage('home')">← Back</button>
+        <h2 class="page-title">MAIN MENU</h2>
+        <div class="role-grid">
+            <div class="role-card glass" onclick="showPage('roles')">
+                <h3>VIEW SKILLS</h3>
+                <p style="color: #cfcfcf; margin-top: 10px; font-size: 0.9rem;">Check default role builds</p>
+            </div>
+            <div class="role-card glass" onclick="showPage('generator')">
+                <h3>GENERATOR</h3>
+                <p style="color: #cfcfcf; margin-top: 10px; font-size: 0.9rem;">Create & Test your own combo</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="roles" class="page">  
+        <button class="back-btn" onclick="showPage('main-menu')">← Back</button>  
+        <h2 class="page-title">SELECT YOUR ROLE</h2>  
+        <div class="role-grid">  
+            <div class="role-card glass" onclick="showPage('rusher')"><h3>RUSHER</h3></div>  
+            <div class="role-card glass" onclick="showPage('support')"><h3>SUPPORT</h3></div>  
+            <div class="role-card glass" onclick="showPage('rifle')"><h3>RIFLE</h3></div>  
+            <div class="role-card glass" onclick="showPage('sniper')"><h3>SNIPER</h3></div>  
+        </div>  
+    </section>  
+
+    <section id="generator" class="page">
+        <button class="back-btn" onclick="showPage('main-menu')">← Back</button>
+        <h2 class="page-title" id="gen-title">BUILD CREATOR</h2>
+        
+        <div id="selection-area" class="generator-box glass">
+            <p class="instruction">Choose <strong>1 Active</strong> and <strong>3 Passive</strong> skills</p>
+            
+            <h3 class="skill-type-title">ACTIVE SKILLS (Select 1)</h3>
+            <div class="char-grid" id="active-grid">
+                </div>
+
+            <h3 class="skill-type-title">PASSIVE SKILLS (Select 3) <span id="passive-count">(0/3)</span></h3>
+            <div class="char-grid" id="passive-grid">
+                </div>
+
+            <button class="glow-btn" id="generate-btn" style="display:none;" onclick="startGeneration()">GENERATE BUILD</button>
         </div>
 
-        <div class="skill-card glass">
-
-            <h3>Clash Squad</h3>
-
-            <ul>
-                <li>Dimitri (Active)</li>
-                <li>Kapella</li>
-                <li>Leon</li>
-                <li>Olivia</li>
-            </ul>
-
+        <div id="loading-area" style="display:none; text-align:center;">
+            <div class="loader">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" class="bg-circle"></circle>
+                    <circle cx="50" cy="50" r="45" class="progress-circle" id="loading-circle"></circle>
+                </svg>
+                <div class="percentage" id="loading-text">0%</div>
+            </div>
+            <h3 style="margin-top: 20px; color: #b98cff;">Analyzing Combination...</h3>
         </div>
 
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- RIFLE -->
-<!-- ========================= -->
-
-<section id="rifle" class="page">
-
-    <button class="back-btn" onclick="showPage('roles')">
-        ← Back
-    </button>
-
-    <h2 class="page-title">
-        RIFLE
-    </h2>
-
-    <div class="skills-wrapper">
-
-        <div class="skill-card glass">
-
-            <h3>Battle Royale</h3>
-
-            <ul>
-                <li>Skyler (Active)</li>
-                <li>Laura</li>
-                <li>Moco</li>
-                <li>D-Bee</li>
-            </ul>
-
+        <div id="result-area" class="glass" style="display:none; padding: 30px; text-align: center; max-width: 600px; width: 100%;">
+            <h2 id="result-role" style="color: #fff; text-shadow: 0 0 15px #9f49ff; margin-bottom: 20px;"></h2>
+            <div id="selected-skills-display" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 25px;"></div>
+            <div id="ai-suggestion" style="background: rgba(159,73,255,.1); padding: 15px; border-radius: 10px; border: 1px solid rgba(159,73,255,.3);"></div>
+            <button class="glow-btn" onclick="resetGenerator()" style="margin-top: 25px;">CREATE ANOTHER</button>
         </div>
+    </section>
 
-        <div class="skill-card glass">
+    <section id="rusher" class="page">  
+        <button class="back-btn" onclick="showPage('roles')">← Back</button>  
+        <h2 class="page-title">RUSHER</h2>  
+        <div class="skills-wrapper">  
+            <div class="skill-card glass">  
+                <h3>Battle Royale</h3>  
+                <ul><li>Tatsuya (Active)</li><li>Jota</li><li>Miguel</li><li>D-Bee</li></ul>  
+            </div>  
+            <div class="skill-card glass">  
+                <h3>Clash Squad</h3>  
+                <ul><li>Oscar (Active)</li><li>Jota</li><li>Leon</li><li>Hayato</li></ul>  
+            </div>  
+        </div>  
+    </section>  
 
-            <h3>Clash Squad</h3>
-
-            <ul>
-                <li>Skyler (Active)</li>
-                <li>Laura</li>
-                <li>Hayato</li>
-                <li>Moco</li>
-            </ul>
-
+    <section id="support" class="page">  
+        <button class="back-btn" onclick="showPage('roles')">← Back</button>  
+        <h2 class="page-title">SUPPORT</h2>  
+        <div class="skills-wrapper">  
+            <div class="skill-card glass">  
+                <h3>Battle Royale</h3>  
+                <ul><li>Alok (Active)</li><li>Kapella</li><li>Leon</li><li>Jota</li></ul>  
+            </div>  
+            <div class="skill-card glass">  
+                <h3>Clash Squad</h3>  
+                <ul><li>Dimitri (Active)</li><li>Kapella</li><li>Leon</li><li>Olivia</li></ul>  
+            </div>  
         </div>
+    </section>  
 
-    </div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SNIPER -->
-<!-- ========================= -->
-
-<section id="sniper" class="page">
-
-    <button class="back-btn" onclick="showPage('roles')">
-        ← Back
-    </button>
-
-    <h2 class="page-title">
-        SNIPER
-    </h2>
-
-    <div class="skills-wrapper">
-
-        <div class="skill-card glass">
-
-            <h3>Battle Royale</h3>
-
-            <ul>
-                <li>Iris (Active)</li>
-                <li>Laura</li>
-                <li>Rafael</li>
-                <li>Moco</li>
-            </ul>
-
+    <section id="rifle" class="page">  
+        <button class="back-btn" onclick="showPage('roles')">← Back</button>  
+        <h2 class="page-title">RIFLE</h2>  
+        <div class="skills-wrapper">  
+            <div class="skill-card glass">  
+                <h3>Battle Royale</h3>  
+                <ul><li>Skyler (Active)</li><li>Laura</li><li>Moco</li><li>D-Bee</li></ul>  
+            </div>  
+            <div class="skill-card glass">  
+                <h3>Clash Squad</h3>  
+                <ul><li>Skyler (Active)</li><li>Laura</li><li>Hayato</li><li>Moco</li></ul>  
+            </div>  
         </div>
+    </section>  
 
-        <div class="skill-card glass">
-
-            <h3>Clash Squad</h3>
-
-            <ul>
-                <li>Iris (Active)</li>
-                <li>Laura</li>
-                <li>Rafael</li>
-                <li>Moco</li>
-            </ul>
-
+    <section id="sniper" class="page">  
+        <button class="back-btn" onclick="showPage('roles')">← Back</button>  
+        <h2 class="page-title">SNIPER</h2>  
+        <div class="skills-wrapper">  
+            <div class="skill-card glass">  
+                <h3>Battle Royale</h3>  
+                <ul><li>Iris (Active)</li><li>Laura</li><li>Rafael</li><li>Moco</li></ul>  
+            </div>  
+            <div class="skill-card glass">  
+                <h3>Clash Squad</h3>  
+                <ul><li>Iris (Active)</li><li>Laura</li><li>Rafael</li><li>Moco</li></ul>  
+            </div>  
         </div>
+    </section>  
 
-    </div>
-
-</section>
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>  
+</body>  
 </html>
+
