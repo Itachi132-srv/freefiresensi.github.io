@@ -1,6 +1,6 @@
 // ==============================
 // SHARDEX FF SKILLS
-// Premium Navigation & Generator
+// Premium Navigation & Generator (All Characters Updated)
 // ==============================
 
 const pages = document.querySelectorAll(".page");
@@ -33,20 +33,38 @@ document.addEventListener("keydown", (e) => {
 // GENERATOR LOGIC
 // ==============================
 
-// Characters data with their primary roles
+// All Free Fire Characters mapped to their best roles
 const characters = {
     active: [
-        {name: 'Tatsuya', role: 'Rusher'}, {name: 'Alok', role: 'Support'}, 
-        {name: 'Skyler', role: 'Rifle'}, {name: 'Iris', role: 'Sniper'}, 
-        {name: 'Dimitri', role: 'Support'}, {name: 'Orion', role: 'Rusher'}
+        {name: 'Alok', role: 'Support'}, {name: 'Tatsuya', role: 'Rusher'}, 
+        {name: 'Chrono', role: 'Rifle'}, {name: 'Skyler', role: 'Rifle'}, 
+        {name: 'Wukong', role: 'Rusher'}, {name: 'K (Captain Booyah)', role: 'Support'}, 
+        {name: 'Dimitri', role: 'Support'}, {name: 'Orion', role: 'Rusher'},
+        {name: 'Homer', role: 'Rifle'}, {name: 'Iris', role: 'Sniper'},
+        {name: 'Xayne', role: 'Rusher'}, {name: 'Steffie', role: 'Support'},
+        {name: 'A124', role: 'Rifle'}, {name: 'Clu', role: 'Sniper'},
+        {name: 'Santino', role: 'Rusher'}, {name: 'Ryden', role: 'Sniper'},
+        {name: 'Ignis', role: 'Rifle'}
     ],
     passive: [
-        {name: 'Jota', role: 'Rusher'}, {name: 'Hayato', role: 'Rusher'}, 
-        {name: 'D-Bee', role: 'Rusher'}, {name: 'Kelly', role: 'Rusher'},
-        {name: 'Kapella', role: 'Support'}, {name: 'Olivia', role: 'Support'}, 
-        {name: 'Leon', role: 'Support'}, {name: 'Shirou', role: 'Rifle'},
-        {name: 'Laura', role: 'Sniper'}, {name: 'Moco', role: 'Sniper'}, 
-        {name: 'Rafael', role: 'Sniper'}, {name: 'Wolfrahh', role: 'Rifle'}
+        {name: 'Kelly', role: 'Rusher'}, {name: 'Hayato', role: 'Rusher'}, 
+        {name: 'Jota', role: 'Rusher'}, {name: 'Miguel', role: 'Rifle'},
+        {name: 'Moco', role: 'Sniper'}, {name: 'Maxim', role: 'Support'},
+        {name: 'Kla', role: 'Rusher'}, {name: 'Luqueta', role: 'Rifle'},
+        {name: 'Wolfrahh', role: 'Rifle'}, {name: 'D-Bee', role: 'Rusher'},
+        {name: 'Leon', role: 'Support'}, {name: 'Otho', role: 'Rifle'},
+        {name: 'Thiva', role: 'Support'}, {name: 'Shirou', role: 'Rusher'},
+        {name: 'Maro', role: 'Sniper'}, {name: 'Nairi', role: 'Support'},
+        {name: 'J.Biebs', role: 'Support'}, {name: 'Luna', role: 'Rusher'},
+        {name: 'Sonia', role: 'Rusher'}, {name: 'Suzy', role: 'Rifle'},
+        {name: 'Ford', role: 'Support'}, {name: 'Olivia', role: 'Support'},
+        {name: 'Nikita', role: 'Rusher'}, {name: 'Andrew', role: 'Support'},
+        {name: 'Antonio', role: 'Rusher'}, {name: 'Paloma', role: 'Support'},
+        {name: 'Caroline', role: 'Rusher'}, {name: 'Misha', role: 'Rusher'},
+        {name: 'Notora', role: 'Support'}, {name: 'Kapella', role: 'Support'},
+        {name: 'Alvaro', role: 'Rifle'}, {name: 'Joseph', role: 'Rusher'},
+        {name: 'Shani', role: 'Support'}, {name: 'Laura', role: 'Sniper'},
+        {name: 'Rafael', role: 'Sniper'}
     ]
 };
 
@@ -186,7 +204,7 @@ function showResults() {
         // Find a better alternative
         const alternative = characters.passive.find(c => c.role === dominantRole && !selectedPassives.includes(c.name));
         if (alternative) {
-            suggestionDiv.innerHTML = `<p><strong>AI Tip:</strong> Ye combo theek hai, lekin <strong>${mismatch.name}</strong> ${mismatch.role} ke liye hai. Ek pure ${dominantRole} build ke liye aap iski jagah <strong>${alternative.name}</strong> use karen to zyada acha hai!</p>`;
+            suggestionDiv.innerHTML = `<p><strong>AI Tip:</strong> Ye combo theek hai, lekin <strong>${mismatch.name}</strong> thoda ${mismatch.role} side pe hai. Ek pure ${dominantRole} build ke liye aap iski jagah <strong>${alternative.name}</strong> use karen to zyada faida hoga!</p>`;
         } else {
              suggestionDiv.innerHTML = `<p>Good mixed combination for versatile gameplay!</p>`;
         }
